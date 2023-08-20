@@ -1,0 +1,48 @@
+/* Global styles */
+.App {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #477afc;
+  color: white;
+  padding: 20px;
+  flex: 0 0 200px; /* Sidebar width for desktop */
+  height: 160vh; /* Full height for desktop */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Content styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: rgb(254, 254, 254);
+}
+/* 
+h2 {
+  color: #333;
+} */
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media screen and (max-width: 768px) {
+  .App {
+    flex-direction: column; /* Revert to column layout for mobile */
+  }
+
+  .sidebar {
+    flex: none; /* Remove flex for mobile */
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Auto height for mobile */
+  }
+}
